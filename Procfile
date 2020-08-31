@@ -1,0 +1,1 @@
+web: gunicorn infotech_test.wsgi --log-file -
