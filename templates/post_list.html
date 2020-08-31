@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Post List
+{% endblock title %}
+
+{% block content %}
+
+    <button><a href="{% url "posts-list" %}?order=desc">Descending</a></button>
+    <button><a href="{% url "posts-list" %}?order=asc">Ascending</a></button>
+    <button><a href="{% url "posts-list" %}?last=day">Last 24 hours</a></button>
+
+    <hr>
+
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.published_on }}</p>
+    {% endfor %}
+
+{% endblock %}
