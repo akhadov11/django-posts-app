@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <title> {% block title %} Posts {% endblock title %} </title>
 </head>
 <body>
 
+{% if user.is_authenticated %}
+    <h2>Hi {{ user.username }}</h2>
+    <p><a href="{% url 'logout' %}">Logout</a></p>
+{% else %}
+    <p>You are not logged in</p>
+    <p><a href="{% url 'login' %}">Log in</a> or <a href="{% url 'signup' %}">Sign up</a></p>
+{% endif %}
+
 {% block content %}
 {% endblock %}
+
 </body>
 </html>
