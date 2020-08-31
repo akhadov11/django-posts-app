@@ -10,6 +10,7 @@
     <button><a href="{% url "posts-list" %}?order=asc">Ascending</a></button>
     <button><a href="{% url "posts-list" %}?last=day">Last 24 hours</a></button>
     <button><a href="{% url "post-create" %}">Create a post</a> </button>
+    <button><a href="{% url "user-posts" %}">Only my({{ user.username }}`s) posts</a></button>
 
     <hr>
 

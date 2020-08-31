@@ -41,3 +41,13 @@ class PostCreateView(generic.CreateView):
         if self.request.user.is_authenticated:
             form.instance.author = self.request.user
         return super().form_valid(form)
+
+
+class UserPostsView(generic.ListView):
+    model = Post
+    template_name = 'post_list.html'
+    context_object_name = 'posts'
+
+    def get_queryset(self):
+        user = self.request.user
+        return Post.objects.filter(author__id=user.pk)
