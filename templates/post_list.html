@@ -15,7 +15,14 @@
 
     {% for post in posts %}
         <h1>{{ post.title }}</h1>
+        {% if post.author %}
+        <h3>by {{ post.author }}</h3>
+        {% endif %}
+        {% if post.image %}
+        <img src="{{ post.image.url }}">
+        {% endif %}
         <p>{{ post.published_on }}</p>
+        <hr>
     {% endfor %}
 
 {% endblock %}

@@ -34,5 +34,10 @@ class PostListView(generic.ListView):
 class PostCreateView(generic.CreateView):
     model = Post
     template_name = 'post_create.html'
-    fields = ['title', 'body']
+    fields = ['title', 'body', 'image']
     success_url = reverse_lazy("posts-list")
+
+    def form_valid(self, form):
+        if self.request.user.is_authenticated:
+            form.instance.author = self.request.user
+        return super().form_valid(form)
