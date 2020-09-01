@@ -21,6 +21,7 @@ What's more, it is possible to get posts published during last 24 hours.
 
 ###deploy###
 The app is deployed to Heroku. Link - "http://posts-app-infotech.herokuapp.com/"
+Heroku does not allow to store media from users. So if you want to test that feature, you should try iy out locally.
 
 
 ###future plans###
