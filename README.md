@@ -9,14 +9,15 @@ Test assignment for InfoTech internship
 
 
 ###functionality description###
+
 On the home sreen a list of posts is displayed. There is also a button to add a post. All users can add posts.
 
 Moreover, there is an authentication system. You can sign up and then log in to the system. 
-Now your posts will include your username in a new field for author`s name. You can get all your posts by pressing the corresponding button(my posts).
+Now your posts will include your username in a new field for author's name. You can get all your posts by pressing the corresponding button(my posts).
 In addition to this, users can add images to their publications.
 
 Also, there are various filters ont the posts list page. For example, you can sort the posts in descending or ascending(by default) oreder.
-What`s more, it is possible to get posts published during last 24 hours.
+What's more, it is possible to get posts published during last 24 hours.
 
 ###deploy###
 The app is deployed to Heroku. Link - "http://posts-app-infotech.herokuapp.com/"
